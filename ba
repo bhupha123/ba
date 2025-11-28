@@ -1,0 +1,60 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("W or L HUB✨", "Ocean")
+local Tab = Window:NewTab("Farm")
+local Section = Tab:NewSection("auto farm")
+local Section = Tab:NewSection("Bro This Test")
+Section:NewToggle("stat farm Lv. 1-50", "", function(state)
+    if state then
+        print("Toggle On")
+ 
+getgenv().Farm = true
+ 
+while getgenv().Farm do
+    for i,v in pairs(Workspace.Monster.Mon:GetChildren()) do
+        if v.Name == "Soldier [Lv. 1]" then
+            local hrp = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+            local Mon = v:FindFirstChild("HumanoidRootPart")
+            hrp.CFrame = Mon.CFrame * CFrame.new(0,0,5)
+            local args = {
+	"FS_None_M1"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(args))
+ 
+local args = {
+	"take",
+	"Kill 4 Soldiers"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("Quest"):InvokeServer(unpack(args))
+ 
+        end
+    end
+    task.wait()
+end
+    else
+        print("Toggle Off")
+ 
+getgenv().Farm = false
+ 
+while getgenv().Farm do
+    for i,v in pairs(Workspace.Monster.Mon:GetChildren()) do
+        if v.Name == "Soldier [Lv. 1]" then
+            local hrp = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+            local Mon = v:FindFirstChild("HumanoidRootPart")
+            hrp.CFrame = Mon.CFrame * CFrame.new(0,0,5)
+            local args = {
+	"FS_None_M1"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(args))
+ 
+local args = {
+	"take",
+	"Kill 4 Soldiers"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("Quest"):InvokeServer(unpack(args))
+ 
+        end
+    end
+    task.wait(0.1)
+end
+    end
+end)
